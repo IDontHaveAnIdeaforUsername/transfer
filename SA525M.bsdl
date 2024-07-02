@@ -1,0 +1,1298 @@
+-----------------------------------------------------------------------------
+-- HS11-39280-2HW 
+--
+-- This BSDL file is for use on SA525M		
+
+-------------------------------------------------------------------------------
+--
+--  Source     -     File originated at Qualcomm
+--  Disclaimer -     QUALCOMM Incorporated reserves the right to make changes to the
+--                   product(s) or information contained herein without notice. No
+--                   liability is assumed for any damages arising directly or
+--                   indirectly by their use or application. The information
+--                   provided in this document is provided on an "as is" basis.
+--
+--------------------------------------------------------------------------------
+--
+--   Rev. History 
+--   1.0 Original release - 08/02/2023
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+-- Author          : bsdl_gen script version latest
+-- Created         : 4:15:16, Tue Dec 6, 2022
+------------------------------------------------------------------------------
+
+
+    entity SA525M is generic (PHYSICAL_PIN_MAP : string := "PSP"); 
+        port ( atest0 : linkage bit ; 
+            atest1 : linkage bit ;
+            cxo : linkage bit ;
+            ddr_reset_n : out bit ;
+            ebi0_cal : linkage bit ;
+            ebi0_ck_c : inout bit ;
+            ebi0_ck_t : inout bit ;
+            ebi0_lp5_ca0_lp4_ca0 : inout bit ;
+            ebi0_lp5_ca1_lp4_ca1 : inout bit ;
+            ebi0_lp5_ca2_lp4_cs0 : inout bit ;
+            ebi0_lp5_ca3_lp4_ca2 : inout bit ;
+            ebi0_lp5_ca4_lp4_ca3 : inout bit ;
+            ebi0_lp5_ca5_lp4_ca4 : inout bit ;
+            ebi0_lp5_ca6_lp4_ca5 : inout bit ;
+            ebi0_lp5_cs0_lp4_cke0 : inout bit ;
+            ebi0_lp5_cs1_lp4_cke1 : inout bit ;
+            ebi0_lp5_dbm0_lp4_dbm1 : inout bit ;
+            ebi0_lp5_dbm1_lp4_dbm0 : inout bit ;
+            ebi0_lp5_dq0_lp4_dq8 : inout bit ;
+            ebi0_lp5_dq10_lp4_dq2 : inout bit ;
+            ebi0_lp5_dq11_lp4_dq3 : inout bit ;
+            ebi0_lp5_dq12_lp4_dq4 : inout bit ;
+            ebi0_lp5_dq13_lp4_dq5 : inout bit ;
+            ebi0_lp5_dq14_lp4_dq6 : inout bit ;
+            ebi0_lp5_dq15_lp4_dq7 : inout bit ;
+            ebi0_lp5_dq1_lp4_dq9 : inout bit ;
+            ebi0_lp5_dq2_lp4_dq10 : inout bit ;
+            ebi0_lp5_dq3_lp4_dq11 : inout bit ;
+            ebi0_lp5_dq4_lp4_dq12 : inout bit ;
+            ebi0_lp5_dq5_lp4_dq13 : inout bit ;
+            ebi0_lp5_dq6_lp4_dq14 : inout bit ;
+            ebi0_lp5_dq7_lp4_dq15 : inout bit ;
+            ebi0_lp5_dq8_lp4_dq0 : inout bit ;
+            ebi0_lp5_dq9_lp4_dq1 : inout bit ;
+            ebi0_lp5_dqs0_c_lp4_dqs1_c : inout bit ;
+            ebi0_lp5_dqs0_t_lp4_dqs1_t : inout bit ;
+            ebi0_lp5_dqs1_c_lp4_dqs0_c : inout bit ;
+            ebi0_lp5_dqs1_t_lp4_dqs0_t : inout bit ;
+            ebi0_lp5_nc_lp4_cs1 : inout bit ;
+            ebi0_lp5_wck0_c_lp4_nc : inout bit ;
+            ebi0_lp5_wck0_t_lp4_nc : inout bit ;
+            ebi0_lp5_wck1_c_lp4_nc : inout bit ;
+            ebi0_lp5_wck1_t_lp4_nc : inout bit ;
+            ebi0_test : linkage bit ;
+            eusb_edm : linkage bit ;
+            eusb_edp : linkage bit ;
+            gpio_0 : inout bit ;
+            gpio_1 : inout bit ;
+            gpio_10 : inout bit ;
+            gpio_100 : inout bit ;
+            gpio_101 : inout bit ;
+            gpio_102 : inout bit ;
+            gpio_103 : inout bit ;
+            gpio_104 : inout bit ;
+            gpio_105 : inout bit ;
+            gpio_106 : inout bit ;
+            gpio_107 : inout bit ;
+            gpio_108 : inout bit ;
+            gpio_109 : inout bit ;
+            gpio_11 : inout bit ;
+            gpio_110 : inout bit ;
+            gpio_111 : inout bit ;
+            gpio_112 : inout bit ;
+            gpio_113 : inout bit ;
+            gpio_114 : inout bit ;
+            gpio_115 : inout bit ;
+            gpio_116 : inout bit ;
+            gpio_117 : inout bit ;
+            gpio_118 : inout bit ;
+            gpio_119 : inout bit ;
+            gpio_12 : inout bit ;
+            gpio_120 : inout bit ;
+            gpio_121 : inout bit ;
+            gpio_122 : inout bit ;
+            gpio_123 : inout bit ;
+            gpio_124 : inout bit ;
+            gpio_125 : inout bit ;
+            gpio_126 : inout bit ;
+            gpio_127 : inout bit ;
+            gpio_128 : inout bit ;
+            gpio_129 : inout bit ;
+            gpio_13 : inout bit ;
+            gpio_130 : inout bit ;
+            gpio_131 : inout bit ;
+            gpio_132 : inout bit ;
+            gpio_14 : inout bit ;
+            gpio_15 : inout bit ;
+            gpio_16 : inout bit ;
+            gpio_17 : inout bit ;
+            gpio_18 : inout bit ;
+            gpio_19 : inout bit ;
+            gpio_2 : inout bit ;
+            gpio_20 : inout bit ;
+            gpio_21 : inout bit ;
+            gpio_22 : inout bit ;
+            gpio_23 : inout bit ;
+            gpio_24 : inout bit ;
+            gpio_25 : inout bit ;
+            gpio_26 : inout bit ;
+            gpio_27 : inout bit ;
+            gpio_28 : inout bit ;
+            gpio_29 : inout bit ;
+            gpio_3 : inout bit ;
+            gpio_30 : inout bit ;
+            gpio_31 : inout bit ;
+            gpio_32 : inout bit ;
+            gpio_33 : inout bit ;
+            gpio_34 : inout bit ;
+            gpio_35 : inout bit ;
+            gpio_36 : inout bit ;
+            gpio_37 : inout bit ;
+            gpio_38 : inout bit ;
+            gpio_39 : inout bit ;
+            gpio_4 : inout bit ;
+            gpio_40 : inout bit ;
+            gpio_41 : inout bit ;
+            gpio_42 : inout bit ;
+            gpio_43 : inout bit ;
+            gpio_44 : inout bit ;
+            gpio_45 : inout bit ;
+            gpio_46 : inout bit ;
+            gpio_47 : inout bit ;
+            gpio_48 : inout bit ;
+            gpio_49 : inout bit ;
+            gpio_5 : inout bit ;
+            gpio_50 : inout bit ;
+            gpio_51 : inout bit ;
+            gpio_52 : inout bit ;
+            gpio_53 : inout bit ;
+            gpio_54 : inout bit ;
+            gpio_55 : inout bit ;
+            gpio_56 : inout bit ;
+            gpio_57 : inout bit ;
+            gpio_58 : inout bit ;
+            gpio_59 : inout bit ;
+            gpio_6 : inout bit ;
+            gpio_60 : inout bit ;
+            gpio_61 : inout bit ;
+            gpio_62 : inout bit ;
+            gpio_63 : inout bit ;
+            gpio_64 : inout bit ;
+            gpio_65 : inout bit ;
+            gpio_66 : inout bit ;
+            gpio_67 : inout bit ;
+            gpio_68 : inout bit ;
+            gpio_69 : inout bit ;
+            gpio_7 : inout bit ;
+            gpio_70 : inout bit ;
+            gpio_71 : inout bit ;
+            gpio_72 : inout bit ;
+            gpio_73 : inout bit ;
+            gpio_74 : inout bit ;
+            gpio_75 : inout bit ;
+            gpio_76 : inout bit ;
+            gpio_77 : inout bit ;
+            gpio_78 : inout bit ;
+            gpio_79 : inout bit ;
+            gpio_8 : inout bit ;
+            gpio_80 : inout bit ;
+            gpio_81 : inout bit ;
+            gpio_82 : inout bit ;
+            gpio_83 : inout bit ;
+            gpio_84 : inout bit ;
+            gpio_85 : inout bit ;
+            gpio_86 : inout bit ;
+            gpio_87 : inout bit ;
+            gpio_88 : inout bit ;
+            gpio_89 : inout bit ;
+            gpio_9 : inout bit ;
+            gpio_90 : inout bit ;
+            gpio_91 : inout bit ;
+            gpio_92 : inout bit ;
+            gpio_93 : inout bit ;
+            gpio_94 : inout bit ;
+            gpio_95 : inout bit ;
+            gpio_96 : inout bit ;
+            gpio_97 : inout bit ;
+            gpio_98 : inout bit ;
+            gpio_99 : inout bit ;
+            gpsadc_l1_l0_i : linkage bit ;
+            gpsadc_l1_l0_q : linkage bit ;
+            gpsadc_l5_l1_i : linkage bit ;
+            gpsadc_l5_l1_q : linkage bit ;
+            jtag_srst_n : inout bit ;
+            jtag_tck : in bit ;
+            jtag_tdi : in bit ;
+            jtag_tdo : out bit ;
+            jtag_tms : in bit ;
+            jtag_trst_n : in bit ;
+            mode_0 : in bit ;
+            mode_1 : in bit ;
+            pcie0_refclk_m : out bit ;
+            pcie0_refclk_p : out bit ;
+            pcie0_rx0_m : in bit ;
+            pcie0_rx0_p : in bit ;
+            pcie0_rx1_m : in bit ;
+            pcie0_rx1_p : in bit ;
+            pcie0_tx0_m : out bit ;
+            pcie0_tx0_p : out bit ;
+            pcie0_tx1_m : out bit ;
+            pcie0_tx1_p : out bit ;
+            pcie2_refclk_m : out bit ;
+            pcie2_refclk_p : out bit ;
+            pcie2_rx_m : in bit ;
+            pcie2_rx_p : in bit ;
+            pcie2_tx_m : out bit ;
+            pcie2_tx_p : out bit ;
+            ps_hold : inout bit ;
+            refgen0_atb : linkage bit ;
+            refgen0_rext : linkage bit ;
+            refgen1_atb : linkage bit ;
+            refgen1_rext : linkage bit ;
+            resin_n : inout bit ;
+            resout_n : inout bit ;
+            sdc1_clk : inout bit ;
+            sdc1_cmd : inout bit ;
+            sdc1_data_0 : inout bit ;
+            sdc1_data_1 : inout bit ;
+            sdc1_data_2 : inout bit ;
+            sdc1_data_3 : inout bit ;
+            sdc1_data_4 : inout bit ;
+            sdc1_data_5 : inout bit ;
+            sdc1_data_6 : inout bit ;
+            sdc1_data_7 : inout bit ;
+            sdc1_rclk : inout bit ;
+            sdc2_clk : inout bit ;
+            sdc2_cmd : inout bit ;
+            sdc2_data_0 : inout bit ;
+            sdc2_data_1 : inout bit ;
+            sdc2_data_2 : inout bit ;
+            sdc2_data_3 : inout bit ;
+            sdc2_fb : inout bit ;
+            sgmii0_rx_m : in bit ;
+            sgmii0_rx_p : in bit ;
+            sgmii0_tx_m : out bit ;
+            sgmii0_tx_p : out bit ;
+            sleep_clk : inout bit ;
+            spmi_clk : inout bit ;
+            spmi_data : inout bit ;
+            usb_ss_rx_m : in bit ;
+            usb_ss_rx_p : in bit ;
+            usb_ss_tx_m : out bit ;
+            usb_ss_tx_p : out bit); 
+
+    use STD_1149_1_2001.all ; 
+
+    -- Component Comformance Statement
+    attribute COMPONENT_CONFORMANCE of SA525M : entity is	
+        "STD_1149_1_2001"; 
+
+    -- Device Package Pin Mappings
+    attribute PIN_MAP of SA525M : entity is PHYSICAL_PIN_MAP; 
+    constant PSP : PIN_MAP_STRING :=
+        " atest0 : AR31 , " & 
+        " atest1 : AP30 , " & 
+        " cxo : AK30 , " & 
+        " ddr_reset_n : AB8 , " & 
+        " ebi0_cal : AA3 , " & 
+        " ebi0_ck_c : Y6 , " & 
+        " ebi0_ck_t : W5 , " & 
+        " ebi0_lp5_ca0_lp4_ca0 : R3 , " & 
+        " ebi0_lp5_ca1_lp4_ca1 : T2 , " & 
+        " ebi0_lp5_ca2_lp4_cs0 : U5 , " & 
+        " ebi0_lp5_ca3_lp4_ca2 : V2 , " & 
+        " ebi0_lp5_ca4_lp4_ca3 : U3 , " & 
+        " ebi0_lp5_ca5_lp4_ca4 : W3 , " & 
+        " ebi0_lp5_ca6_lp4_ca5 : Y2 , " & 
+        " ebi0_lp5_cs0_lp4_cke0 : R5 , " & 
+        " ebi0_lp5_cs1_lp4_cke1 : V6 , " & 
+        " ebi0_lp5_dbm0_lp4_dbm1 : AC3 , " & 
+        " ebi0_lp5_dbm1_lp4_dbm0 : L3 , " & 
+        " ebi0_lp5_dq0_lp4_dq8 : AG3 , " & 
+        " ebi0_lp5_dq10_lp4_dq2 : K2 , " & 
+        " ebi0_lp5_dq11_lp4_dq3 : M2 , " & 
+        " ebi0_lp5_dq12_lp4_dq4 : P6 , " & 
+        " ebi0_lp5_dq13_lp4_dq5 : N5 , " & 
+        " ebi0_lp5_dq14_lp4_dq6 : P2 , " & 
+        " ebi0_lp5_dq15_lp4_dq7 : N3 , " & 
+        " ebi0_lp5_dq1_lp4_dq9 : AF2 , " & 
+        " ebi0_lp5_dq2_lp4_dq10 : AE3 , " & 
+        " ebi0_lp5_dq3_lp4_dq11 : AD2 , " & 
+        " ebi0_lp5_dq4_lp4_dq12 : AC5 , " & 
+        " ebi0_lp5_dq5_lp4_dq13 : AB2 , " & 
+        " ebi0_lp5_dq6_lp4_dq14 : AB6 , " & 
+        " ebi0_lp5_dq7_lp4_dq15 : AA5 , " & 
+        " ebi0_lp5_dq8_lp4_dq0 : H2 , " & 
+        " ebi0_lp5_dq9_lp4_dq1 : J3 , " & 
+        " ebi0_lp5_dqs0_c_lp4_dqs1_c : AD6 , " & 
+        " ebi0_lp5_dqs0_t_lp4_dqs1_t : AE5 , " & 
+        " ebi0_lp5_dqs1_c_lp4_dqs0_c : J5 , " & 
+        " ebi0_lp5_dqs1_t_lp4_dqs0_t : K6 , " & 
+        " ebi0_lp5_nc_lp4_cs1 : T6 , " & 
+        " ebi0_lp5_wck0_c_lp4_nc : AF6 , " & 
+        " ebi0_lp5_wck0_t_lp4_nc : AG5 , " & 
+        " ebi0_lp5_wck1_c_lp4_nc : L5 , " & 
+        " ebi0_lp5_wck1_t_lp4_nc : M6 , " & 
+        " ebi0_test : T8 , " & 
+        " eusb_edm : AM20 , " & 
+        " eusb_edp : AL21 , " & 
+        " gpio_0 : AM12 , " & 
+        " gpio_1 : R31 , " & 
+        " gpio_10 : AA35 , " & 
+        " gpio_100 : AP4 , " & 
+        " gpio_101 : AN3 , " & 
+        " gpio_102 : G9 , " & 
+        " gpio_103 : G13 , " & 
+        " gpio_104 : G11 , " & 
+        " gpio_105 : D4 , " & 
+        " gpio_106 : U33 , " & 
+        " gpio_107 : P32 , " & 
+        " gpio_108 : V34 , " & 
+        " gpio_109 : N39 , " & 
+        " gpio_11 : T32 , " & 
+        " gpio_110 : AF36 , " & 
+        " gpio_111 : AG37 , " & 
+        " gpio_112 : AF34 , " & 
+        " gpio_113 : AG35 , " & 
+        " gpio_114 : AF30 , " & 
+        " gpio_115 : AJ33 , " & 
+        " gpio_116 : AE37 , " & 
+        " gpio_117 : AE33 , " & 
+        " gpio_118 : AD36 , " & 
+        " gpio_119 : AD34 , " & 
+        " gpio_12 : G7 , " & 
+        " gpio_120 : N37 , " & 
+        " gpio_121 : N35 , " & 
+        " gpio_122 : R35 , " & 
+        " gpio_123 : AR7 , " & 
+        " gpio_124 : AM8 , " & 
+        " gpio_125 : AP6 , " & 
+        " gpio_126 : U37 , " & 
+        " gpio_127 : R33 , " & 
+        " gpio_128 : M38 , " & 
+        " gpio_129 : C9 , " & 
+        " gpio_13 : F6 , " & 
+        " gpio_130 : D8 , " & 
+        " gpio_131 : E9 , " & 
+        " gpio_132 : F8 , " & 
+        " gpio_14 : AM18 , " & 
+        " gpio_15 : AP18 , " & 
+        " gpio_16 : AP8 , " & 
+        " gpio_17 : AN7 , " & 
+        " gpio_18 : AL7 , " & 
+        " gpio_19 : AP2 , " & 
+        " gpio_2 : AL11 , " & 
+        " gpio_20 : AP10 , " & 
+        " gpio_21 : AL9 , " & 
+        " gpio_22 : AN9 , " & 
+        " gpio_23 : AR9 , " & 
+        " gpio_24 : M32 , " & 
+        " gpio_25 : W37 , " & 
+        " gpio_26 : U35 , " & 
+        " gpio_27 : L35 , " & 
+        " gpio_28 : M36 , " & 
+        " gpio_29 : M34 , " & 
+        " gpio_3 : AM10 , " & 
+        " gpio_30 : K32 , " & 
+        " gpio_31 : L33 , " & 
+        " gpio_32 : L31 , " & 
+        " gpio_33 : P38 , " & 
+        " gpio_34 : T36 , " & 
+        " gpio_35 : F4 , " & 
+        " gpio_36 : Y34 , " & 
+        " gpio_37 : W35 , " & 
+        " gpio_38 : P36 , " & 
+        " gpio_39 : L37 , " & 
+        " gpio_4 : AM34 , " & 
+        " gpio_40 : R37 , " & 
+        " gpio_41 : V36 , " & 
+        " gpio_42 : E5 , " & 
+        " gpio_43 : D6 , " & 
+        " gpio_44 : C5 , " & 
+        " gpio_45 : E1 , " & 
+        " gpio_46 : E7 , " & 
+        " gpio_47 : C7 , " & 
+        " gpio_48 : AB34 , " & 
+        " gpio_49 : AA31 , " & 
+        " gpio_5 : J31 , " & 
+        " gpio_50 : AP34 , " & 
+        " gpio_51 : AN33 , " & 
+        " gpio_52 : P34 , " & 
+        " gpio_53 : N33 , " & 
+        " gpio_54 : T34 , " & 
+        " gpio_55 : Y36 , " & 
+        " gpio_56 : AR17 , " & 
+        " gpio_57 : AT16 , " & 
+        " gpio_58 : N31 , " & 
+        " gpio_59 : AP16 , " & 
+        " gpio_6 : AM32 , " & 
+        " gpio_60 : AN15 , " & 
+        " gpio_61 : AR15 , " & 
+        " gpio_62 : AK16 , " & 
+        " gpio_63 : AM14 , " & 
+        " gpio_64 : AM16 , " & 
+        " gpio_65 : AL17 , " & 
+        " gpio_66 : AP14 , " & 
+        " gpio_67 : AL13 , " & 
+        " gpio_68 : AN13 , " & 
+        " gpio_69 : AL15 , " & 
+        " gpio_7 : AN31 , " & 
+        " gpio_70 : AR13 , " & 
+        " gpio_71 : AN11 , " & 
+        " gpio_72 : AK12 , " & 
+        " gpio_73 : AP12 , " & 
+        " gpio_74 : AN1 , " & 
+        " gpio_75 : AN17 , " & 
+        " gpio_76 : B4 , " & 
+        " gpio_77 : B2 , " & 
+        " gpio_78 : C1 , " & 
+        " gpio_79 : D2 , " & 
+        " gpio_8 : AA37 , " & 
+        " gpio_80 : C3 , " & 
+        " gpio_81 : E3 , " & 
+        " gpio_82 : AG33 , " & 
+        " gpio_83 : AH34 , " & 
+        " gpio_84 : AK34 , " & 
+        " gpio_85 : AJ35 , " & 
+        " gpio_86 : AJ37 , " & 
+        " gpio_87 : AG31 , " & 
+        " gpio_88 : AH36 , " & 
+        " gpio_89 : AH32 , " & 
+        " gpio_9 : AB36 , " & 
+        " gpio_90 : AK36 , " & 
+        " gpio_91 : AL33 , " & 
+        " gpio_92 : AK32 , " & 
+        " gpio_93 : AL31 , " & 
+        " gpio_94 : AF32 , " & 
+        " gpio_95 : AE35 , " & 
+        " gpio_96 : AD32 , " & 
+        " gpio_97 : AE31 , " & 
+        " gpio_98 : AM6 , " & 
+        " gpio_99 : AK8 , " & 
+        " gpsadc_l1_l0_i : J39 , " & 
+        " gpsadc_l1_l0_q : H38 , " & 
+        " gpsadc_l5_l1_i : G35 , " & 
+        " gpsadc_l5_l1_q : H36 , " & 
+        " jtag_srst_n : AC31 , " & 
+        " jtag_tck : AC35 , " & 
+        " jtag_tdi : AB32 , " & 
+        " jtag_tdo : AB30 , " & 
+        " jtag_tms : AC33 , " & 
+        " jtag_trst_n : AC37 , " & 
+        " mode_0 : AP36 , " & 
+        " mode_1 : AR33 , " & 
+        " pcie0_refclk_m : AR25 , " & 
+        " pcie0_refclk_p : AU25 , " & 
+        " pcie0_rx0_m : AT30 , " & 
+        " pcie0_rx0_p : AT28 , " & 
+        " pcie0_rx1_m : AR27 , " & 
+        " pcie0_rx1_p : AU27 , " & 
+        " pcie0_tx0_m : AP20 , " & 
+        " pcie0_tx0_p : AT20 , " & 
+        " pcie0_tx1_m : AR23 , " & 
+        " pcie0_tx1_p : AR21 , " & 
+        " pcie2_refclk_m : AT36 , " & 
+        " pcie2_refclk_p : AU35 , " & 
+        " pcie2_rx_m : AT38 , " & 
+        " pcie2_rx_p : AU37 , " & 
+        " pcie2_tx_m : AT34 , " & 
+        " pcie2_tx_p : AU33 , " & 
+        " ps_hold : AJ31 , " & 
+        " refgen0_atb : AP28 , " & 
+        " refgen0_rext : AU23 , " & 
+        " refgen1_atb : AL19 , " & 
+        " refgen1_rext : AU17 , " & 
+        " resin_n : AP32 , " & 
+        " resout_n : AR11 , " & 
+        " sdc1_clk : AJ1 , " & 
+        " sdc1_cmd : AK4 , " & 
+        " sdc1_data_0 : AK2 , " & 
+        " sdc1_data_1 : AH8 , " & 
+        " sdc1_data_2 : AM4 , " & 
+        " sdc1_data_3 : AL1 , " & 
+        " sdc1_data_4 : AL3 , " & 
+        " sdc1_data_5 : AL5 , " & 
+        " sdc1_data_6 : AJ3 , " & 
+        " sdc1_data_7 : AJ7 , " & 
+        " sdc1_rclk : AJ5 , " & 
+        " sdc2_clk : AT6 , " & 
+        " sdc2_cmd : AR5 , " & 
+        " sdc2_data_0 : AT2 , " & 
+        " sdc2_data_1 : AU3 , " & 
+        " sdc2_data_2 : AT4 , " & 
+        " sdc2_data_3 : AU5 , " & 
+        " sdc2_fb : AR3 , " & 
+        " sgmii0_rx_m : AM36 , " & 
+        " sgmii0_rx_p : AM38 , " & 
+        " sgmii0_tx_m : AN39 , " & 
+        " sgmii0_tx_p : AL39 , " & 
+        " sleep_clk : K30 , " & 
+        " spmi_clk : AM30 , " & 
+        " spmi_data : AN29 , " & 
+        " usb_ss_rx_m : AM26 , " & 
+        " usb_ss_rx_p : AN27 , " & 
+        " usb_ss_tx_m : AN23 , " & 
+        " usb_ss_tx_p : AL23 " ;  
+
+    -- Grouped Port Identification
+    attribute PORT_GROUPING of  SA525M: entity is 
+        "Differential_Voltage ( " & 
+        "(ebi0_ck_t, ebi0_ck_c) , " &
+        "(ebi0_lp5_dqs0_t_lp4_dqs1_t, ebi0_lp5_dqs0_c_lp4_dqs1_c) , " &
+        "(ebi0_lp5_dqs1_t_lp4_dqs0_t, ebi0_lp5_dqs1_c_lp4_dqs0_c) , " &
+        "(ebi0_lp5_wck0_t_lp4_nc, ebi0_lp5_wck0_c_lp4_nc) , " &
+        "(ebi0_lp5_wck1_t_lp4_nc, ebi0_lp5_wck1_c_lp4_nc) , " &
+        "(pcie0_refclk_p, pcie0_refclk_m) , " &
+        "(pcie0_tx0_p, pcie0_tx0_m) , " &
+        "(pcie0_tx1_p, pcie0_tx1_m) , " &
+        "(pcie2_refclk_p, pcie2_refclk_m) , " &
+        "(pcie2_tx_p, pcie2_tx_m) , " &
+        "(sgmii0_tx_p, sgmii0_tx_m) , " &
+        "(usb_ss_tx_p, usb_ss_tx_m) ) " ; 
+
+    -- Scan port identification
+    attribute TAP_SCAN_IN of jtag_tdi 		: signal is true; 
+    attribute TAP_SCAN_OUT of jtag_tdo 		: signal is true; 
+    attribute TAP_SCAN_MODE of jtag_tms 		: signal is true; 
+    attribute TAP_SCAN_RESET of jtag_trst_n 	: signal is true; 
+    attribute TAP_SCAN_CLOCK of jtag_tck 	: signal is (20.0e6,BOTH); 
+ 
+    -- Compliance-enable Description
+    attribute COMPLIANCE_PATTERNS of  SA525M : entity is
+        "(mode_1,mode_0) (11) "; 
+
+    -- Instruction Register Description
+    attribute INSTRUCTION_LENGTH  of SA525M : entity is 11 ;
+    attribute INSTRUCTION_OPCODE  of SA525M : entity is 
+        "BYPASS(11111111111), " & 
+        "PRIVATE1(00000001010), " & 
+        "PRIVATE2(00000010100), " & 
+        "PRIVATE3(00000000111), " & 
+        "PRIVATE4(00000011110), " & 
+        "PRIVATE5(00000010000), " & 
+        "PRIVATE6(00000010001), " & 
+        "PRIVATE7(00000010111), " & 
+        "PRIVATE8(00000010101), " & 
+        "PRIVATE9(00000001111), " & 
+        "PRIVATE10(00000001100), " & 
+        "PRIVATE11(00000001110), " & 
+        "EXTEST(00000011101), " & 
+        "PRIVATE12(00000001000), " & 
+        "PRIVATE13(00000001001), " & 
+        "HIGHZ(00000000011), " & 
+        "IDCODE(00000000010), " & 
+        "PRIVATE14(00000011000), " & 
+        "PRIVATE15(00000011011), " & 
+        "PRIVATE16(00000011010), " & 
+        "PRIVATE17(00000011111), " & 
+        "PRELOAD(00000000110), " & 
+        "PRIVATE18(00000100001), " & 
+        "SAMPLE(00000000001), " & 
+        "PRIVATE19(00000100010), " & 
+        "PRIVATE20(00000100011), " & 
+        "PRIVATE21(00000100100), " & 
+        "PRIVATE22(00000100000), " & 
+        "PRIVATE23(00000011100), " & 
+        "PRIVATE24(00000000100), " & 
+        "PRIVATE25(00000000101)" ; 
+
+    attribute INSTRUCTION_CAPTURE of SA525M : entity is "00000000001"; 
+
+    -- Private Instruction Description
+    attribute INSTRUCTION_PRIVATE of SA525M : entity is
+        "PRIVATE1, " & 
+        "PRIVATE2, " & 
+        "PRIVATE3, " & 
+        "PRIVATE4, " & 
+        "PRIVATE5, " & 
+        "PRIVATE6, " & 
+        "PRIVATE7, " & 
+        "PRIVATE8, " & 
+        "PRIVATE9, " & 
+        "PRIVATE10, " & 
+        "PRIVATE11, " & 
+        "PRIVATE12, " & 
+        "PRIVATE13, " & 
+        "PRIVATE14, " & 
+        "PRIVATE15, " & 
+        "PRIVATE16, " & 
+        "PRIVATE17, " & 
+        "PRIVATE18, " & 
+        "PRIVATE19, " & 
+        "PRIVATE20, " & 
+        "PRIVATE21, " & 
+        "PRIVATE22, " & 
+        "PRIVATE23, " & 
+        "PRIVATE24, " & 
+        "PRIVATE25" ; 
+
+    attribute IDCODE_REGISTER of SA525M : entity is "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX1"; 
+
+    -- Register Access Description
+    attribute REGISTER_ACCESS of SA525M : entity is 
+        "BOUNDARY (EXTEST, SAMPLE, PRELOAD), BYPASS (BYPASS,HIGHZ)";
+
+    -- Boundary-scan Register Description
+    attribute BOUNDARY_LENGTH of SA525M : entity is 671; 
+    attribute BOUNDARY_REGISTER of SA525M : entity is 
+        "  0 ( BC_1, gpio_20, input, X) , " &
+        "  1 ( BC_1, gpio_20, output3, X, 2, 0, Z) , " &
+        "  2 ( BC_1, *, control, 0) , " &
+        "  3 ( BC_1, gpio_21, input, X) , " &
+        "  4 ( BC_1, gpio_21, output3, X, 5, 0, Z) , " &
+        "  5 ( BC_1, *, control, 0) , " &
+        "  6 ( BC_1, gpio_22, input, X) , " &
+        "  7 ( BC_1, gpio_22, output3, X, 8, 0, Z) , " &
+        "  8 ( BC_1, *, control, 0) , " &
+        "  9 ( BC_1, gpio_23, input, X) , " &
+        "  10 ( BC_1, gpio_23, output3, X, 11, 0, Z) , " &
+        "  11 ( BC_1, *, control, 0) , " &
+        "  12 ( BC_1, gpio_16, input, X) , " &
+        "  13 ( BC_1, gpio_16, output3, X, 14, 0, Z) , " &
+        "  14 ( BC_1, *, control, 0) , " &
+        "  15 ( BC_1, gpio_17, input, X) , " &
+        "  16 ( BC_1, gpio_17, output3, X, 17, 0, Z) , " &
+        "  17 ( BC_1, *, control, 0) , " &
+        "  18 ( BC_1, gpio_18, input, X) , " &
+        "  19 ( BC_1, gpio_18, output3, X, 20, 0, Z) , " &
+        "  20 ( BC_1, *, control, 0) , " &
+        "  21 ( BC_1, gpio_19, input, X) , " &
+        "  22 ( BC_1, gpio_19, output3, X, 23, 0, Z) , " &
+        "  23 ( BC_1, *, control, 0) , " &
+        "  24 ( BC_1, gpio_74, input, X) , " &
+        "  25 ( BC_1, gpio_74, output3, X, 26, 0, Z) , " &
+        "  26 ( BC_1, *, control, 0) , " &
+        "  27 ( BC_1, gpio_123, input, X) , " &
+        "  28 ( BC_1, gpio_123, output3, X, 29, 0, Z) , " &
+        "  29 ( BC_1, *, control, 0) , " &
+        "  30 ( BC_1, gpio_124, input, X) , " &
+        "  31 ( BC_1, gpio_124, output3, X, 32, 0, Z) , " &
+        "  32 ( BC_1, *, control, 0) , " &
+        "  33 ( BC_1, gpio_125, input, X) , " &
+        "  34 ( BC_1, gpio_125, output3, X, 35, 0, Z) , " &
+        "  35 ( BC_1, *, control, 0) , " &
+        "  36 ( BC_1, gpio_98, input, X) , " &
+        "  37 ( BC_1, gpio_98, output3, X, 38, 0, Z) , " &
+        "  38 ( BC_1, *, control, 0) , " &
+        "  39 ( BC_1, gpio_99, input, X) , " &
+        "  40 ( BC_1, gpio_99, output3, X, 41, 0, Z) , " &
+        "  41 ( BC_1, *, control, 0) , " &
+        "  42 ( BC_1, gpio_100, input, X) , " &
+        "  43 ( BC_1, gpio_100, output3, X, 44, 0, Z) , " &
+        "  44 ( BC_1, *, control, 0) , " &
+        "  45 ( BC_1, gpio_101, input, X) , " &
+        "  46 ( BC_1, gpio_101, output3, X, 47, 0, Z) , " &
+        "  47 ( BC_1, *, control, 0) , " &
+        "  48 ( BC_1, sdc1_clk, input, X) , " &
+        "  49 ( BC_1, sdc1_clk, output3, X, 50, 0, Z) , " &
+        "  50 ( BC_1, *, control, 0) , " &
+        "  51 ( BC_1, sdc1_rclk, input, X) , " &
+        "  52 ( BC_1, sdc1_rclk, output3, X, 53, 0, Z) , " &
+        "  53 ( BC_1, *, control, 0) , " &
+        "  54 ( BC_1, sdc1_cmd, input, X) , " &
+        "  55 ( BC_1, sdc1_cmd, output3, X, 56, 0, Z) , " &
+        "  56 ( BC_1, *, control, 0) , " &
+        "  57 ( BC_1, sdc1_data_0, input, X) , " &
+        "  58 ( BC_1, sdc1_data_0, output3, X, 59, 0, Z) , " &
+        "  59 ( BC_1, *, control, 0) , " &
+        "  60 ( BC_1, sdc1_data_1, input, X) , " &
+        "  61 ( BC_1, sdc1_data_1, output3, X, 62, 0, Z) , " &
+        "  62 ( BC_1, *, control, 0) , " &
+        "  63 ( BC_1, sdc1_data_2, input, X) , " &
+        "  64 ( BC_1, sdc1_data_2, output3, X, 65, 0, Z) , " &
+        "  65 ( BC_1, *, control, 0) , " &
+        "  66 ( BC_1, sdc1_data_3, input, X) , " &
+        "  67 ( BC_1, sdc1_data_3, output3, X, 68, 0, Z) , " &
+        "  68 ( BC_1, *, control, 0) , " &
+        "  69 ( BC_1, sdc1_data_4, input, X) , " &
+        "  70 ( BC_1, sdc1_data_4, output3, X, 71, 0, Z) , " &
+        "  71 ( BC_1, *, control, 0) , " &
+        "  72 ( BC_1, sdc1_data_5, input, X) , " &
+        "  73 ( BC_1, sdc1_data_5, output3, X, 74, 0, Z) , " &
+        "  74 ( BC_1, *, control, 0) , " &
+        "  75 ( BC_1, sdc1_data_6, input, X) , " &
+        "  76 ( BC_1, sdc1_data_6, output3, X, 77, 0, Z) , " &
+        "  77 ( BC_1, *, control, 0) , " &
+        "  78 ( BC_1, sdc1_data_7, input, X) , " &
+        "  79 ( BC_1, sdc1_data_7, output3, X, 80, 0, Z) , " &
+        "  80 ( BC_1, *, control, 0) , " &
+        "  81 ( BC_1, ddr_reset_n, output3, X, 82, 0, Pull1) , " &
+        "  82 ( BC_1, *, control, 0) , " &
+        "  83 ( BC_4, ebi0_lp5_dqs1_c_lp4_dqs0_c, input, X) , " &
+        "  84 ( BC_1, ebi0_lp5_dqs1_t_lp4_dqs0_t, input, X) , " &
+        "  85 ( BC_1, ebi0_lp5_dqs1_t_lp4_dqs0_t, output3, X, 86, 0, Z) , " &
+        "  86 ( BC_1, *, control, 0) , " &
+        "  87 ( BC_1, ebi0_lp5_dq13_lp4_dq5, input, X) , " &
+        "  88 ( BC_1, ebi0_lp5_dq13_lp4_dq5, output3, X, 89, 0, Z) , " &
+        "  89 ( BC_1, *, control, 0) , " &
+        "  90 ( BC_1, ebi0_lp5_dbm1_lp4_dbm0, input, X) , " &
+        "  91 ( BC_1, ebi0_lp5_dbm1_lp4_dbm0, output3, X, 92, 0, Z) , " &
+        "  92 ( BC_1, *, control, 0) , " &
+        "  93 ( BC_1, ebi0_lp5_dq15_lp4_dq7, input, X) , " &
+        "  94 ( BC_1, ebi0_lp5_dq15_lp4_dq7, output3, X, 95, 0, Z) , " &
+        "  95 ( BC_1, *, control, 0) , " &
+        "  96 ( BC_1, ebi0_lp5_dq12_lp4_dq4, input, X) , " &
+        "  97 ( BC_1, ebi0_lp5_dq12_lp4_dq4, output3, X, 98, 0, Z) , " &
+        "  98 ( BC_1, *, control, 0) , " &
+        "  99 ( BC_1, ebi0_lp5_dq14_lp4_dq6, input, X) , " &
+        "  100 ( BC_1, ebi0_lp5_dq14_lp4_dq6, output3, X, 101, 0, Z) , " &
+        "  101 ( BC_1, *, control, 0) , " &
+        "  102 ( BC_1, ebi0_lp5_dq9_lp4_dq1, input, X) , " &
+        "  103 ( BC_1, ebi0_lp5_dq9_lp4_dq1, output3, X, 104, 0, Z) , " &
+        "  104 ( BC_1, *, control, 0) , " &
+        "  105 ( BC_1, ebi0_lp5_dq10_lp4_dq2, input, X) , " &
+        "  106 ( BC_1, ebi0_lp5_dq10_lp4_dq2, output3, X, 107, 0, Z) , " &
+        "  107 ( BC_1, *, control, 0) , " &
+        "  108 ( BC_1, ebi0_lp5_dq8_lp4_dq0, input, X) , " &
+        "  109 ( BC_1, ebi0_lp5_dq8_lp4_dq0, output3, X, 110, 0, Z) , " &
+        "  110 ( BC_1, *, control, 0) , " &
+        "  111 ( BC_1, ebi0_lp5_dq11_lp4_dq3, input, X) , " &
+        "  112 ( BC_1, ebi0_lp5_dq11_lp4_dq3, output3, X, 113, 0, Z) , " &
+        "  113 ( BC_1, *, control, 0) , " &
+        "  114 ( BC_4, ebi0_lp5_wck1_c_lp4_nc, input, X) , " &
+        "  115 ( BC_1, ebi0_lp5_wck1_t_lp4_nc, input, X) , " &
+        "  116 ( BC_1, ebi0_lp5_wck1_t_lp4_nc, output3, X, 117, 0, Z) , " &
+        "  117 ( BC_1, *, control, 0) , " &
+        "  118 ( BC_1, *, internal, 0) , " &
+        "  119 ( BC_1, ebi0_ck_t, input, X) , " &
+        "  120 ( BC_1, ebi0_ck_t, output3, X, 121, 0, Z) , " &
+        "  121 ( BC_1, *, control, 0) , " &
+        "  122 ( BC_1, ebi0_lp5_ca5_lp4_ca4, input, X) , " &
+        "  123 ( BC_1, ebi0_lp5_ca5_lp4_ca4, output3, X, 124, 0, Z) , " &
+        "  124 ( BC_1, *, control, 0) , " &
+        "  125 ( BC_1, ebi0_lp5_ca4_lp4_ca3, input, X) , " &
+        "  126 ( BC_1, ebi0_lp5_ca4_lp4_ca3, output3, X, 127, 0, Z) , " &
+        "  127 ( BC_1, *, control, 0) , " &
+        "  128 ( BC_1, ebi0_lp5_ca3_lp4_ca2, input, X) , " &
+        "  129 ( BC_1, ebi0_lp5_ca3_lp4_ca2, output3, X, 130, 0, Z) , " &
+        "  130 ( BC_1, *, control, 0) , " &
+        "  131 ( BC_1, ebi0_lp5_ca6_lp4_ca5, input, X) , " &
+        "  132 ( BC_1, ebi0_lp5_ca6_lp4_ca5, output3, X, 133, 0, Z) , " &
+        "  133 ( BC_1, *, control, 0) , " &
+        "  134 ( BC_1, ebi0_lp5_cs0_lp4_cke0, input, X) , " &
+        "  135 ( BC_1, ebi0_lp5_cs0_lp4_cke0, output3, X, 136, 0, Z) , " &
+        "  136 ( BC_1, *, control, 0) , " &
+        "  137 ( BC_1, ebi0_lp5_cs1_lp4_cke1, input, X) , " &
+        "  138 ( BC_1, ebi0_lp5_cs1_lp4_cke1, output3, X, 139, 0, Z) , " &
+        "  139 ( BC_1, *, control, 0) , " &
+        "  140 ( BC_1, ebi0_lp5_ca0_lp4_ca0, input, X) , " &
+        "  141 ( BC_1, ebi0_lp5_ca0_lp4_ca0, output3, X, 142, 0, Z) , " &
+        "  142 ( BC_1, *, control, 0) , " &
+        "  143 ( BC_1, ebi0_lp5_ca2_lp4_cs0, input, X) , " &
+        "  144 ( BC_1, ebi0_lp5_ca2_lp4_cs0, output3, X, 145, 0, Z) , " &
+        "  145 ( BC_1, *, control, 0) , " &
+        "  146 ( BC_1, ebi0_lp5_ca1_lp4_ca1, input, X) , " &
+        "  147 ( BC_1, ebi0_lp5_ca1_lp4_ca1, output3, X, 148, 0, Z) , " &
+        "  148 ( BC_1, *, control, 0) , " &
+        "  149 ( BC_1, ebi0_lp5_nc_lp4_cs1, input, X) , " &
+        "  150 ( BC_1, ebi0_lp5_nc_lp4_cs1, output3, X, 151, 0, Z) , " &
+        "  151 ( BC_1, *, control, 0) , " &
+        "  152 ( BC_4, ebi0_lp5_dqs0_c_lp4_dqs1_c, input, X) , " &
+        "  153 ( BC_1, ebi0_lp5_dqs0_t_lp4_dqs1_t, input, X) , " &
+        "  154 ( BC_1, ebi0_lp5_dqs0_t_lp4_dqs1_t, output3, X, 155, 0, Z) , " &
+        "  155 ( BC_1, *, control, 0) , " &
+        "  156 ( BC_1, ebi0_lp5_dq6_lp4_dq14, input, X) , " &
+        "  157 ( BC_1, ebi0_lp5_dq6_lp4_dq14, output3, X, 158, 0, Z) , " &
+        "  158 ( BC_1, *, control, 0) , " &
+        "  159 ( BC_1, ebi0_lp5_dbm0_lp4_dbm1, input, X) , " &
+        "  160 ( BC_1, ebi0_lp5_dbm0_lp4_dbm1, output3, X, 161, 0, Z) , " &
+        "  161 ( BC_1, *, control, 0) , " &
+        "  162 ( BC_1, ebi0_lp5_dq7_lp4_dq15, input, X) , " &
+        "  163 ( BC_1, ebi0_lp5_dq7_lp4_dq15, output3, X, 164, 0, Z) , " &
+        "  164 ( BC_1, *, control, 0) , " &
+        "  165 ( BC_1, ebi0_lp5_dq4_lp4_dq12, input, X) , " &
+        "  166 ( BC_1, ebi0_lp5_dq4_lp4_dq12, output3, X, 167, 0, Z) , " &
+        "  167 ( BC_1, *, control, 0) , " &
+        "  168 ( BC_1, ebi0_lp5_dq5_lp4_dq13, input, X) , " &
+        "  169 ( BC_1, ebi0_lp5_dq5_lp4_dq13, output3, X, 170, 0, Z) , " &
+        "  170 ( BC_1, *, control, 0) , " &
+        "  171 ( BC_1, ebi0_lp5_dq1_lp4_dq9, input, X) , " &
+        "  172 ( BC_1, ebi0_lp5_dq1_lp4_dq9, output3, X, 173, 0, Z) , " &
+        "  173 ( BC_1, *, control, 0) , " &
+        "  174 ( BC_1, ebi0_lp5_dq2_lp4_dq10, input, X) , " &
+        "  175 ( BC_1, ebi0_lp5_dq2_lp4_dq10, output3, X, 176, 0, Z) , " &
+        "  176 ( BC_1, *, control, 0) , " &
+        "  177 ( BC_1, ebi0_lp5_dq0_lp4_dq8, input, X) , " &
+        "  178 ( BC_1, ebi0_lp5_dq0_lp4_dq8, output3, X, 179, 0, Z) , " &
+        "  179 ( BC_1, *, control, 0) , " &
+        "  180 ( BC_1, ebi0_lp5_dq3_lp4_dq11, input, X) , " &
+        "  181 ( BC_1, ebi0_lp5_dq3_lp4_dq11, output3, X, 182, 0, Z) , " &
+        "  182 ( BC_1, *, control, 0) , " &
+        "  183 ( BC_4, ebi0_lp5_wck0_c_lp4_nc, input, X) , " &
+        "  184 ( BC_1, ebi0_lp5_wck0_t_lp4_nc, input, X) , " &
+        "  185 ( BC_1, ebi0_lp5_wck0_t_lp4_nc, output3, X, 186, 0, Z) , " &
+        "  186 ( BC_1, *, control, 0) , " &
+        "  187 ( BC_1, gpio_77, input, X) , " &
+        "  188 ( BC_1, gpio_77, output3, X, 189, 0, Z) , " &
+        "  189 ( BC_1, *, control, 0) , " &
+        "  190 ( BC_1, gpio_78, input, X) , " &
+        "  191 ( BC_1, gpio_78, output3, X, 192, 0, Z) , " &
+        "  192 ( BC_1, *, control, 0) , " &
+        "  193 ( BC_1, gpio_79, input, X) , " &
+        "  194 ( BC_1, gpio_79, output3, X, 195, 0, Z) , " &
+        "  195 ( BC_1, *, control, 0) , " &
+        "  196 ( BC_1, gpio_45, input, X) , " &
+        "  197 ( BC_1, gpio_45, output3, X, 198, 0, Z) , " &
+        "  198 ( BC_1, *, control, 0) , " &
+        "  199 ( BC_1, gpio_80, input, X) , " &
+        "  200 ( BC_1, gpio_80, output3, X, 201, 0, Z) , " &
+        "  201 ( BC_1, *, control, 0) , " &
+        "  202 ( BC_1, gpio_81, input, X) , " &
+        "  203 ( BC_1, gpio_81, output3, X, 204, 0, Z) , " &
+        "  204 ( BC_1, *, control, 0) , " &
+        "  205 ( BC_1, gpio_105, input, X) , " &
+        "  206 ( BC_1, gpio_105, output3, X, 207, 0, Z) , " &
+        "  207 ( BC_1, *, control, 0) , " &
+        "  208 ( BC_1, gpio_76, input, X) , " &
+        "  209 ( BC_1, gpio_76, output3, X, 210, 0, Z) , " &
+        "  210 ( BC_1, *, control, 0) , " &
+        "  211 ( BC_1, gpio_35, input, X) , " &
+        "  212 ( BC_1, gpio_35, output3, X, 213, 0, Z) , " &
+        "  213 ( BC_1, *, control, 0) , " &
+        "  214 ( BC_1, gpio_42, input, X) , " &
+        "  215 ( BC_1, gpio_42, output3, X, 216, 0, Z) , " &
+        "  216 ( BC_1, *, control, 0) , " &
+        "  217 ( BC_1, gpio_43, input, X) , " &
+        "  218 ( BC_1, gpio_43, output3, X, 219, 0, Z) , " &
+        "  219 ( BC_1, *, control, 0) , " &
+        "  220 ( BC_1, gpio_44, input, X) , " &
+        "  221 ( BC_1, gpio_44, output3, X, 222, 0, Z) , " &
+        "  222 ( BC_1, *, control, 0) , " &
+        "  223 ( BC_1, gpio_46, input, X) , " &
+        "  224 ( BC_1, gpio_46, output3, X, 225, 0, Z) , " &
+        "  225 ( BC_1, *, control, 0) , " &
+        "  226 ( BC_1, gpio_47, input, X) , " &
+        "  227 ( BC_1, gpio_47, output3, X, 228, 0, Z) , " &
+        "  228 ( BC_1, *, control, 0) , " &
+        "  229 ( BC_1, gpio_12, input, X) , " &
+        "  230 ( BC_1, gpio_12, output3, X, 231, 0, Z) , " &
+        "  231 ( BC_1, *, control, 0) , " &
+        "  232 ( BC_1, gpio_13, input, X) , " &
+        "  233 ( BC_1, gpio_13, output3, X, 234, 0, Z) , " &
+        "  234 ( BC_1, *, control, 0) , " &
+        "  235 ( BC_1, gpio_129, input, X) , " &
+        "  236 ( BC_1, gpio_129, output3, X, 237, 0, Z) , " &
+        "  237 ( BC_1, *, control, 0) , " &
+        "  238 ( BC_1, gpio_130, input, X) , " &
+        "  239 ( BC_1, gpio_130, output3, X, 240, 0, Z) , " &
+        "  240 ( BC_1, *, control, 0) , " &
+        "  241 ( BC_1, gpio_131, input, X) , " &
+        "  242 ( BC_1, gpio_131, output3, X, 243, 0, Z) , " &
+        "  243 ( BC_1, *, control, 0) , " &
+        "  244 ( BC_1, gpio_132, input, X) , " &
+        "  245 ( BC_1, gpio_132, output3, X, 246, 0, Z) , " &
+        "  246 ( BC_1, *, control, 0) , " &
+        "  247 ( BC_1, gpio_102, input, X) , " &
+        "  248 ( BC_1, gpio_102, output3, X, 249, 0, Z) , " &
+        "  249 ( BC_1, *, control, 0) , " &
+        "  250 ( BC_1, gpio_103, input, X) , " &
+        "  251 ( BC_1, gpio_103, output3, X, 252, 0, Z) , " &
+        "  252 ( BC_1, *, control, 0) , " &
+        "  253 ( BC_1, gpio_104, input, X) , " &
+        "  254 ( BC_1, gpio_104, output3, X, 255, 0, Z) , " &
+        "  255 ( BC_1, *, control, 0) , " &
+        "  256 ( BC_1, *, internal, 0) , " &
+        "  257 ( BC_1, *, internal, 0) , " &
+        "  258 ( BC_1, *, internal, 0) , " &
+        "  259 ( BC_1, *, internal, 0) , " &
+        "  260 ( BC_1, *, internal, 0) , " &
+        "  261 ( BC_1, *, internal, 0) , " &
+        "  262 ( BC_1, *, internal, 0) , " &
+        "  263 ( BC_1, *, internal, 0) , " &
+        "  264 ( BC_1, *, internal, 0) , " &
+        "  265 ( BC_1, *, internal, 0) , " &
+        "  266 ( BC_1, *, internal, 0) , " &
+        "  267 ( BC_1, *, internal, 0) , " &
+        "  268 ( BC_1, *, internal, 0) , " &
+        "  269 ( BC_1, *, internal, 0) , " &
+        "  270 ( BC_1, *, internal, 0) , " &
+        "  271 ( BC_1, *, internal, 0) , " &
+        "  272 ( BC_1, *, internal, 0) , " &
+        "  273 ( BC_1, *, internal, 0) , " &
+        "  274 ( BC_1, *, internal, 0) , " &
+        "  275 ( BC_1, *, internal, 0) , " &
+        "  276 ( BC_1, *, internal, 0) , " &
+        "  277 ( BC_1, *, internal, 0) , " &
+        "  278 ( BC_1, *, internal, 0) , " &
+        "  279 ( BC_1, *, internal, 0) , " &
+        "  280 ( BC_1, *, internal, 0) , " &
+        "  281 ( BC_1, *, internal, 0) , " &
+        "  282 ( BC_1, *, internal, 0) , " &
+        "  283 ( BC_1, *, internal, 0) , " &
+        "  284 ( BC_1, *, internal, 0) , " &
+        "  285 ( BC_1, *, internal, 0) , " &
+        "  286 ( BC_1, *, internal, 0) , " &
+        "  287 ( BC_1, *, internal, 0) , " &
+        "  288 ( BC_1, *, internal, 0) , " &
+        "  289 ( BC_1, *, internal, 0) , " &
+        "  290 ( BC_1, *, internal, 0) , " &
+        "  291 ( BC_1, *, internal, 0) , " &
+        "  292 ( BC_1, gpio_24, input, X) , " &
+        "  293 ( BC_1, gpio_24, output3, X, 294, 0, Z) , " &
+        "  294 ( BC_1, *, control, 0) , " &
+        "  295 ( BC_1, gpio_25, input, X) , " &
+        "  296 ( BC_1, gpio_25, output3, X, 297, 0, Z) , " &
+        "  297 ( BC_1, *, control, 0) , " &
+        "  298 ( BC_1, gpio_37, input, X) , " &
+        "  299 ( BC_1, gpio_37, output3, X, 300, 0, Z) , " &
+        "  300 ( BC_1, *, control, 0) , " &
+        "  301 ( BC_1, gpio_38, input, X) , " &
+        "  302 ( BC_1, gpio_38, output3, X, 303, 0, Z) , " &
+        "  303 ( BC_1, *, control, 0) , " &
+        "  304 ( BC_1, gpio_39, input, X) , " &
+        "  305 ( BC_1, gpio_39, output3, X, 306, 0, Z) , " &
+        "  306 ( BC_1, *, control, 0) , " &
+        "  307 ( BC_1, gpio_40, input, X) , " &
+        "  308 ( BC_1, gpio_40, output3, X, 309, 0, Z) , " &
+        "  309 ( BC_1, *, control, 0) , " &
+        "  310 ( BC_1, gpio_41, input, X) , " &
+        "  311 ( BC_1, gpio_41, output3, X, 312, 0, Z) , " &
+        "  312 ( BC_1, *, control, 0) , " &
+        "  313 ( BC_1, gpio_36, input, X) , " &
+        "  314 ( BC_1, gpio_36, output3, X, 315, 0, Z) , " &
+        "  315 ( BC_1, *, control, 0) , " &
+        "  316 ( BC_1, sleep_clk, input, X) , " &
+        "  317 ( BC_1, sleep_clk, output3, X, 318, 0, Z) , " &
+        "  318 ( BC_1, *, control, 0) , " &
+        "  319 ( BC_1, gpio_26, input, X) , " &
+        "  320 ( BC_1, gpio_26, output3, X, 321, 0, Z) , " &
+        "  321 ( BC_1, *, control, 0) , " &
+        "  322 ( BC_1, gpio_27, input, X) , " &
+        "  323 ( BC_1, gpio_27, output3, X, 324, 0, Z) , " &
+        "  324 ( BC_1, *, control, 0) , " &
+        "  325 ( BC_1, gpio_28, input, X) , " &
+        "  326 ( BC_1, gpio_28, output3, X, 327, 0, Z) , " &
+        "  327 ( BC_1, *, control, 0) , " &
+        "  328 ( BC_1, gpio_29, input, X) , " &
+        "  329 ( BC_1, gpio_29, output3, X, 330, 0, Z) , " &
+        "  330 ( BC_1, *, control, 0) , " &
+        "  331 ( BC_1, gpio_30, input, X) , " &
+        "  332 ( BC_1, gpio_30, output3, X, 333, 0, Z) , " &
+        "  333 ( BC_1, *, control, 0) , " &
+        "  334 ( BC_1, gpio_31, input, X) , " &
+        "  335 ( BC_1, gpio_31, output3, X, 336, 0, Z) , " &
+        "  336 ( BC_1, *, control, 0) , " &
+        "  337 ( BC_1, gpio_32, input, X) , " &
+        "  338 ( BC_1, gpio_32, output3, X, 339, 0, Z) , " &
+        "  339 ( BC_1, *, control, 0) , " &
+        "  340 ( BC_1, gpio_33, input, X) , " &
+        "  341 ( BC_1, gpio_33, output3, X, 342, 0, Z) , " &
+        "  342 ( BC_1, *, control, 0) , " &
+        "  343 ( BC_1, gpio_34, input, X) , " &
+        "  344 ( BC_1, gpio_34, output3, X, 345, 0, Z) , " &
+        "  345 ( BC_1, *, control, 0) , " &
+        "  346 ( BC_1, gpio_58, input, X) , " &
+        "  347 ( BC_1, gpio_58, output3, X, 348, 0, Z) , " &
+        "  348 ( BC_1, *, control, 0) , " &
+        "  349 ( BC_1, gpio_120, input, X) , " &
+        "  350 ( BC_1, gpio_120, output3, X, 351, 0, Z) , " &
+        "  351 ( BC_1, *, control, 0) , " &
+        "  352 ( BC_1, gpio_121, input, X) , " &
+        "  353 ( BC_1, gpio_121, output3, X, 354, 0, Z) , " &
+        "  354 ( BC_1, *, control, 0) , " &
+        "  355 ( BC_1, gpio_122, input, X) , " &
+        "  356 ( BC_1, gpio_122, output3, X, 357, 0, Z) , " &
+        "  357 ( BC_1, *, control, 0) , " &
+        "  358 ( BC_1, gpio_126, input, X) , " &
+        "  359 ( BC_1, gpio_126, output3, X, 360, 0, Z) , " &
+        "  360 ( BC_1, *, control, 0) , " &
+        "  361 ( BC_1, gpio_127, input, X) , " &
+        "  362 ( BC_1, gpio_127, output3, X, 363, 0, Z) , " &
+        "  363 ( BC_1, *, control, 0) , " &
+        "  364 ( BC_1, gpio_128, input, X) , " &
+        "  365 ( BC_1, gpio_128, output3, X, 366, 0, Z) , " &
+        "  366 ( BC_1, *, control, 0) , " &
+        "  367 ( BC_1, gpio_109, input, X) , " &
+        "  368 ( BC_1, gpio_109, output3, X, 369, 0, Z) , " &
+        "  369 ( BC_1, *, control, 0) , " &
+        "  370 ( BC_1, gpio_108, input, X) , " &
+        "  371 ( BC_1, gpio_108, output3, X, 372, 0, Z) , " &
+        "  372 ( BC_1, *, control, 0) , " &
+        "  373 ( BC_1, gpio_107, input, X) , " &
+        "  374 ( BC_1, gpio_107, output3, X, 375, 0, Z) , " &
+        "  375 ( BC_1, *, control, 0) , " &
+        "  376 ( BC_1, gpio_106, input, X) , " &
+        "  377 ( BC_1, gpio_106, output3, X, 378, 0, Z) , " &
+        "  378 ( BC_1, *, control, 0) , " &
+        "  379 ( BC_1, gpio_52, input, X) , " &
+        "  380 ( BC_1, gpio_52, output3, X, 381, 0, Z) , " &
+        "  381 ( BC_1, *, control, 0) , " &
+        "  382 ( BC_1, gpio_53, input, X) , " &
+        "  383 ( BC_1, gpio_53, output3, X, 384, 0, Z) , " &
+        "  384 ( BC_1, *, control, 0) , " &
+        "  385 ( BC_1, gpio_54, input, X) , " &
+        "  386 ( BC_1, gpio_54, output3, X, 387, 0, Z) , " &
+        "  387 ( BC_1, *, control, 0) , " &
+        "  388 ( BC_1, gpio_55, input, X) , " &
+        "  389 ( BC_1, gpio_55, output3, X, 390, 0, Z) , " &
+        "  390 ( BC_1, *, control, 0) , " &
+        "  391 ( BC_1, gpio_8, input, X) , " &
+        "  392 ( BC_1, gpio_8, output3, X, 393, 0, Z) , " &
+        "  393 ( BC_1, *, control, 0) , " &
+        "  394 ( BC_1, gpio_9, input, X) , " &
+        "  395 ( BC_1, gpio_9, output3, X, 396, 0, Z) , " &
+        "  396 ( BC_1, *, control, 0) , " &
+        "  397 ( BC_1, gpio_10, input, X) , " &
+        "  398 ( BC_1, gpio_10, output3, X, 399, 0, Z) , " &
+        "  399 ( BC_1, *, control, 0) , " &
+        "  400 ( BC_1, gpio_11, input, X) , " &
+        "  401 ( BC_1, gpio_11, output3, X, 402, 0, Z) , " &
+        "  402 ( BC_1, *, control, 0) , " &
+        "  403 ( BC_1, gpio_5, input, X) , " &
+        "  404 ( BC_1, gpio_5, output3, X, 405, 0, Z) , " &
+        "  405 ( BC_1, *, control, 0) , " &
+        "  406 ( BC_1, gpio_1, input, X) , " &
+        "  407 ( BC_1, gpio_1, output3, X, 408, 0, Z) , " &
+        "  408 ( BC_1, *, control, 0) , " &
+        "  409 ( BC_1, jtag_srst_n, input, X) , " &
+        "  410 ( BC_1, jtag_srst_n, output3, X, 411, 0, Pull1) , " &
+        "  411 ( BC_1, *, control, 0) , " &
+        "  412 ( BC_1, gpio_48, input, X) , " &
+        "  413 ( BC_1, gpio_48, output3, X, 414, 0, Z) , " &
+        "  414 ( BC_1, *, control, 0) , " &
+        "  415 ( BC_1, gpio_49, input, X) , " &
+        "  416 ( BC_1, gpio_49, output3, X, 417, 0, Z) , " &
+        "  417 ( BC_1, *, control, 0) , " &
+        "  418 ( BC_1, gpio_116, input, X) , " &
+        "  419 ( BC_1, gpio_116, output3, X, 420, 0, Z) , " &
+        "  420 ( BC_1, *, control, 0) , " &
+        "  421 ( BC_1, gpio_117, input, X) , " &
+        "  422 ( BC_1, gpio_117, output3, X, 423, 0, Z) , " &
+        "  423 ( BC_1, *, control, 0) , " &
+        "  424 ( BC_1, gpio_118, input, X) , " &
+        "  425 ( BC_1, gpio_118, output3, X, 426, 0, Z) , " &
+        "  426 ( BC_1, *, control, 0) , " &
+        "  427 ( BC_1, gpio_119, input, X) , " &
+        "  428 ( BC_1, gpio_119, output3, X, 429, 0, Z) , " &
+        "  429 ( BC_1, *, control, 0) , " &
+        "  430 ( BC_1, gpio_94, input, X) , " &
+        "  431 ( BC_1, gpio_94, output3, X, 432, 0, Z) , " &
+        "  432 ( BC_1, *, control, 0) , " &
+        "  433 ( BC_1, gpio_95, input, X) , " &
+        "  434 ( BC_1, gpio_95, output3, X, 435, 0, Z) , " &
+        "  435 ( BC_1, *, control, 0) , " &
+        "  436 ( BC_1, gpio_96, input, X) , " &
+        "  437 ( BC_1, gpio_96, output3, X, 438, 0, Z) , " &
+        "  438 ( BC_1, *, control, 0) , " &
+        "  439 ( BC_1, gpio_97, input, X) , " &
+        "  440 ( BC_1, gpio_97, output3, X, 441, 0, Z) , " &
+        "  441 ( BC_1, *, control, 0) , " &
+        "  442 ( BC_1, gpio_110, input, X) , " &
+        "  443 ( BC_1, gpio_110, output3, X, 444, 0, Z) , " &
+        "  444 ( BC_1, *, control, 0) , " &
+        "  445 ( BC_1, gpio_111, input, X) , " &
+        "  446 ( BC_1, gpio_111, output3, X, 447, 0, Z) , " &
+        "  447 ( BC_1, *, control, 0) , " &
+        "  448 ( BC_1, gpio_112, input, X) , " &
+        "  449 ( BC_1, gpio_112, output3, X, 450, 0, Z) , " &
+        "  450 ( BC_1, *, control, 0) , " &
+        "  451 ( BC_1, gpio_113, input, X) , " &
+        "  452 ( BC_1, gpio_113, output3, X, 453, 0, Z) , " &
+        "  453 ( BC_1, *, control, 0) , " &
+        "  454 ( BC_1, gpio_114, input, X) , " &
+        "  455 ( BC_1, gpio_114, output3, X, 456, 0, Z) , " &
+        "  456 ( BC_1, *, control, 0) , " &
+        "  457 ( BC_1, gpio_115, input, X) , " &
+        "  458 ( BC_1, gpio_115, output3, X, 459, 0, Z) , " &
+        "  459 ( BC_1, *, control, 0) , " &
+        "  460 ( BC_1, gpio_82, input, X) , " &
+        "  461 ( BC_1, gpio_82, output3, X, 462, 0, Z) , " &
+        "  462 ( BC_1, *, control, 0) , " &
+        "  463 ( BC_1, gpio_83, input, X) , " &
+        "  464 ( BC_1, gpio_83, output3, X, 465, 0, Z) , " &
+        "  465 ( BC_1, *, control, 0) , " &
+        "  466 ( BC_1, gpio_84, input, X) , " &
+        "  467 ( BC_1, gpio_84, output3, X, 468, 0, Z) , " &
+        "  468 ( BC_1, *, control, 0) , " &
+        "  469 ( BC_1, gpio_85, input, X) , " &
+        "  470 ( BC_1, gpio_85, output3, X, 471, 0, Z) , " &
+        "  471 ( BC_1, *, control, 0) , " &
+        "  472 ( BC_1, gpio_86, input, X) , " &
+        "  473 ( BC_1, gpio_86, output3, X, 474, 0, Z) , " &
+        "  474 ( BC_1, *, control, 0) , " &
+        "  475 ( BC_1, gpio_87, input, X) , " &
+        "  476 ( BC_1, gpio_87, output3, X, 477, 0, Z) , " &
+        "  477 ( BC_1, *, control, 0) , " &
+        "  478 ( BC_1, gpio_88, input, X) , " &
+        "  479 ( BC_1, gpio_88, output3, X, 480, 0, Z) , " &
+        "  480 ( BC_1, *, control, 0) , " &
+        "  481 ( BC_1, gpio_89, input, X) , " &
+        "  482 ( BC_1, gpio_89, output3, X, 483, 0, Z) , " &
+        "  483 ( BC_1, *, control, 0) , " &
+        "  484 ( BC_1, gpio_90, input, X) , " &
+        "  485 ( BC_1, gpio_90, output3, X, 486, 0, Z) , " &
+        "  486 ( BC_1, *, control, 0) , " &
+        "  487 ( BC_1, gpio_91, input, X) , " &
+        "  488 ( BC_1, gpio_91, output3, X, 489, 0, Z) , " &
+        "  489 ( BC_1, *, control, 0) , " &
+        "  490 ( BC_1, gpio_92, input, X) , " &
+        "  491 ( BC_1, gpio_92, output3, X, 492, 0, Z) , " &
+        "  492 ( BC_1, *, control, 0) , " &
+        "  493 ( BC_1, gpio_93, input, X) , " &
+        "  494 ( BC_1, gpio_93, output3, X, 495, 0, Z) , " &
+        "  495 ( BC_1, *, control, 0) , " &
+        "  496 ( BC_4, sgmii0_rx_p, input, X) , " &
+        "  497 ( BC_4, sgmii0_rx_m, input, X) , " &
+        "  498 ( BC_1, *, internal, 0) , " &
+        "  499 ( BC_1, *, control, 1) , " &
+        "  500 ( BC_1, *, internal, 1) , " &
+        "  501 ( BC_1, sgmii0_tx_p, output3, X, 499, 1, Z) , " &
+        "  502 ( BC_1, *, internal, 0) , " &
+        "  503 ( BC_1, resin_n, input, X) , " &
+        "  504 ( BC_1, resin_n, output3, X, 505, 0, Z) , " &
+        "  505 ( BC_1, *, control, 0) , " &
+        "  506 ( BC_1, spmi_clk, input, X) , " &
+        "  507 ( BC_1, spmi_clk, output3, X, 508, 0, Z) , " &
+        "  508 ( BC_1, *, control, 0) , " &
+        "  509 ( BC_1, spmi_data, input, X) , " &
+        "  510 ( BC_1, spmi_data, output3, X, 511, 0, Z) , " &
+        "  511 ( BC_1, *, control, 0) , " &
+        "  512 ( BC_1, gpio_4, input, X) , " &
+        "  513 ( BC_1, gpio_4, output3, X, 514, 0, Z) , " &
+        "  514 ( BC_1, *, control, 0) , " &
+        "  515 ( BC_1, gpio_6, input, X) , " &
+        "  516 ( BC_1, gpio_6, output3, X, 517, 0, Z) , " &
+        "  517 ( BC_1, *, control, 0) , " &
+        "  518 ( BC_1, gpio_7, input, X) , " &
+        "  519 ( BC_1, gpio_7, output3, X, 520, 0, Z) , " &
+        "  520 ( BC_1, *, control, 0) , " &
+        "  521 ( BC_1, gpio_50, input, X) , " &
+        "  522 ( BC_1, gpio_50, output3, X, 523, 0, Z) , " &
+        "  523 ( BC_1, *, control, 0) , " &
+        "  524 ( BC_1, gpio_51, input, X) , " &
+        "  525 ( BC_1, gpio_51, output3, X, 526, 0, Z) , " &
+        "  526 ( BC_1, *, control, 0) , " &
+        "  527 ( BC_1, ps_hold, input, X) , " &
+        "  528 ( BC_1, ps_hold, output3, X, 529, 0, Pull0) , " &
+        "  529 ( BC_1, *, control, 0) , " &
+        "  530 ( BC_4, pcie2_rx_p, input, X) , " &
+        "  531 ( BC_4, pcie2_rx_m, input, X) , " &
+        "  532 ( BC_1, *, internal, 0) , " &
+        "  533 ( BC_1, *, control, 1) , " &
+        "  534 ( BC_1, *, internal, 0) , " &
+        "  535 ( BC_1, pcie2_tx_p, output3, X, 533, 1, Z) , " &
+        "  536 ( BC_1, *, internal, 0) , " &
+        "  537 ( BC_1, pcie2_refclk_p, output3, X, 538, 0, Z) , " &
+        "  538 ( BC_1, *, control, 0) , " &
+        "  539 ( BC_4, *, internal, 0) , " &
+        "  540 ( BC_4, *, internal, 0) , " &
+        "  541 ( BC_1, *, internal, 0) , " &
+        "  542 ( BC_1, *, internal, 0) , " &
+        "  543 ( BC_1, *, internal, 1) , " &
+        "  544 ( BC_1, *, internal, 0) , " &
+        "  545 ( BC_1, *, internal, 0) , " &
+        "  546 ( BC_4, *, internal, 0) , " &
+        "  547 ( BC_4, *, internal, 0) , " &
+        "  548 ( BC_1, *, internal, 0) , " &
+        "  549 ( BC_1, *, internal, 0) , " &
+        "  550 ( BC_1, *, internal, 1) , " &
+        "  551 ( BC_1, *, internal, 0) , " &
+        "  552 ( BC_1, *, internal, 0) , " &
+        "  553 ( BC_1, *, internal, 0) , " &
+        "  554 ( BC_1, *, internal, 0) , " &
+        "  555 ( BC_4, pcie0_rx1_p, input, X) , " &
+        "  556 ( BC_4, pcie0_rx1_m, input, X) , " &
+        "  557 ( BC_1, *, internal, 0) , " &
+        "  558 ( BC_1, *, control, 1) , " &
+        "  559 ( BC_1, pcie0_tx1_p, output3, X, 558, 1, Z) , " &
+        "  560 ( BC_1, *, internal, 0) , " &
+        "  561 ( BC_4, pcie0_rx0_p, input, X) , " &
+        "  562 ( BC_4, pcie0_rx0_m, input, X) , " &
+        "  563 ( BC_1, *, internal, 0) , " &
+        "  564 ( BC_1, *, control, 1) , " &
+        "  565 ( BC_1, pcie0_tx0_p, output3, X, 564, 1, Z) , " &
+        "  566 ( BC_1, *, internal, 0) , " &
+        "  567 ( BC_1, pcie0_refclk_p, output3, X, 568, 0, Z) , " &
+        "  568 ( BC_1, *, control, 0) , " &
+        "  569 ( BC_4, usb_ss_rx_p, input, X) , " &
+        "  570 ( BC_4, usb_ss_rx_m, input, X) , " &
+        "  571 ( BC_1, *, internal, 0) , " &
+        "  572 ( BC_1, *, control, 1) , " &
+        "  573 ( BC_1, *, internal, 0) , " &
+        "  574 ( BC_1, usb_ss_tx_p, output3, X, 572, 1, Z) , " &
+        "  575 ( BC_1, *, internal, 0) , " &
+        "  576 ( BC_1, *, internal, 0) , " &
+        "  577 ( BC_1, *, internal, 0) , " &
+        "  578 ( BC_1, sdc2_fb, input, X) , " &
+        "  579 ( BC_1, sdc2_fb, output3, X, 580, 0, Z) , " &
+        "  580 ( BC_1, *, control, 0) , " &
+        "  581 ( BC_1, sdc2_cmd, input, X) , " &
+        "  582 ( BC_1, sdc2_cmd, output3, X, 583, 0, Z) , " &
+        "  583 ( BC_1, *, control, 0) , " &
+        "  584 ( BC_1, sdc2_clk, input, X) , " &
+        "  585 ( BC_1, sdc2_clk, output3, X, 586, 0, Z) , " &
+        "  586 ( BC_1, *, control, 0) , " &
+        "  587 ( BC_1, sdc2_data_0, input, X) , " &
+        "  588 ( BC_1, sdc2_data_0, output3, X, 589, 0, Z) , " &
+        "  589 ( BC_1, *, control, 0) , " &
+        "  590 ( BC_1, sdc2_data_1, input, X) , " &
+        "  591 ( BC_1, sdc2_data_1, output3, X, 592, 0, Z) , " &
+        "  592 ( BC_1, *, control, 0) , " &
+        "  593 ( BC_1, sdc2_data_2, input, X) , " &
+        "  594 ( BC_1, sdc2_data_2, output3, X, 595, 0, Z) , " &
+        "  595 ( BC_1, *, control, 0) , " &
+        "  596 ( BC_1, sdc2_data_3, input, X) , " &
+        "  597 ( BC_1, sdc2_data_3, output3, X, 598, 0, Z) , " &
+        "  598 ( BC_1, *, control, 0) , " &
+        "  599 ( BC_1, gpio_14, input, X) , " &
+        "  600 ( BC_1, gpio_14, output3, X, 601, 0, Z) , " &
+        "  601 ( BC_1, *, control, 0) , " &
+        "  602 ( BC_1, gpio_15, input, X) , " &
+        "  603 ( BC_1, gpio_15, output3, X, 604, 0, Z) , " &
+        "  604 ( BC_1, *, control, 0) , " &
+        "  605 ( BC_1, gpio_64, input, X) , " &
+        "  606 ( BC_1, gpio_64, output3, X, 607, 0, Z) , " &
+        "  607 ( BC_1, *, control, 0) , " &
+        "  608 ( BC_1, gpio_65, input, X) , " &
+        "  609 ( BC_1, gpio_65, output3, X, 610, 0, Z) , " &
+        "  610 ( BC_1, *, control, 0) , " &
+        "  611 ( BC_1, gpio_69, input, X) , " &
+        "  612 ( BC_1, gpio_69, output3, X, 613, 0, Z) , " &
+        "  613 ( BC_1, *, control, 0) , " &
+        "  614 ( BC_1, gpio_75, input, X) , " &
+        "  615 ( BC_1, gpio_75, output3, X, 616, 0, Z) , " &
+        "  616 ( BC_1, *, control, 0) , " &
+        "  617 ( BC_1, gpio_56, input, X) , " &
+        "  618 ( BC_1, gpio_56, output3, X, 619, 0, Z) , " &
+        "  619 ( BC_1, *, control, 0) , " &
+        "  620 ( BC_1, gpio_57, input, X) , " &
+        "  621 ( BC_1, gpio_57, output3, X, 622, 0, Z) , " &
+        "  622 ( BC_1, *, control, 0) , " &
+        "  623 ( BC_1, gpio_59, input, X) , " &
+        "  624 ( BC_1, gpio_59, output3, X, 625, 0, Z) , " &
+        "  625 ( BC_1, *, control, 0) , " &
+        "  626 ( BC_1, gpio_60, input, X) , " &
+        "  627 ( BC_1, gpio_60, output3, X, 628, 0, Z) , " &
+        "  628 ( BC_1, *, control, 0) , " &
+        "  629 ( BC_1, gpio_61, input, X) , " &
+        "  630 ( BC_1, gpio_61, output3, X, 631, 0, Z) , " &
+        "  631 ( BC_1, *, control, 0) , " &
+        "  632 ( BC_1, gpio_62, input, X) , " &
+        "  633 ( BC_1, gpio_62, output3, X, 634, 0, Z) , " &
+        "  634 ( BC_1, *, control, 0) , " &
+        "  635 ( BC_1, gpio_63, input, X) , " &
+        "  636 ( BC_1, gpio_63, output3, X, 637, 0, Z) , " &
+        "  637 ( BC_1, *, control, 0) , " &
+        "  638 ( BC_1, gpio_66, input, X) , " &
+        "  639 ( BC_1, gpio_66, output3, X, 640, 0, Z) , " &
+        "  640 ( BC_1, *, control, 0) , " &
+        "  641 ( BC_1, gpio_67, input, X) , " &
+        "  642 ( BC_1, gpio_67, output3, X, 643, 0, Z) , " &
+        "  643 ( BC_1, *, control, 0) , " &
+        "  644 ( BC_1, gpio_68, input, X) , " &
+        "  645 ( BC_1, gpio_68, output3, X, 646, 0, Z) , " &
+        "  646 ( BC_1, *, control, 0) , " &
+        "  647 ( BC_1, gpio_70, input, X) , " &
+        "  648 ( BC_1, gpio_70, output3, X, 649, 0, Z) , " &
+        "  649 ( BC_1, *, control, 0) , " &
+        "  650 ( BC_1, gpio_71, input, X) , " &
+        "  651 ( BC_1, gpio_71, output3, X, 652, 0, Z) , " &
+        "  652 ( BC_1, *, control, 0) , " &
+        "  653 ( BC_1, gpio_72, input, X) , " &
+        "  654 ( BC_1, gpio_72, output3, X, 655, 0, Z) , " &
+        "  655 ( BC_1, *, control, 0) , " &
+        "  656 ( BC_1, gpio_73, input, X) , " &
+        "  657 ( BC_1, gpio_73, output3, X, 658, 0, Z) , " &
+        "  658 ( BC_1, *, control, 0) , " &
+        "  659 ( BC_1, resout_n, input, X) , " &
+        "  660 ( BC_1, resout_n, output3, X, 661, 0, Z) , " &
+        "  661 ( BC_1, *, control, 0) , " &
+        "  662 ( BC_1, gpio_0, input, X) , " &
+        "  663 ( BC_1, gpio_0, output3, X, 664, 0, Z) , " &
+        "  664 ( BC_1, *, control, 0) , " &
+        "  665 ( BC_1, gpio_2, input, X) , " &
+        "  666 ( BC_1, gpio_2, output3, X, 667, 0, Z) , " &
+        "  667 ( BC_1, *, control, 0) , " &
+        "  668 ( BC_1, gpio_3, input, X) , " &
+        "  669 ( BC_1, gpio_3, output3, X, 670, 0, Z) , " &
+        "  670 ( BC_1, *, control, 0)  " ;  
+    end SA525M ; 
+
